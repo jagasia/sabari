@@ -1,0 +1,215 @@
+1) Typescript	
+2) Angular
+	create project
+	create components
+	create services			can access REST API
+	create pipes
+
+3) Spring Boot
+	REST API
+		data access
+
+
+-----------------
+ng new my-project
+	choose routing (y/n) 		y
+	css
+
+
+once the project is created
+	cd project-name
+	ng serve-o
+
+
+	once the project is served to the server, it is automatically opened in a new browser
+		localhost:4200
+
+lets open this project in VS Code
+	File-> 	open folder
+		open the project folder
+
+
+An angular project is made up of 
+	modules
+		single module app
+			"app" is the only module present in this project
+
+	modules contain components	
+	app.module.ts
+		this is where we need to declare all the components and services we create
+	
+	date
+		12-Mar-2020
+		2020-03-12
+
+	pipe is used to transform data into another form
+
+
+	123.4567
+		123.46
+
+	
+
+AppComponent
+	is automatically created when we create a project
+
+	other components we will create
+
+what is component?
+	in Angular we create components
+
+	each component has
+		presentation	HTML
+		Style		CSS
+		script		typescript
+
+
+	ex:	App component has
+			app.component.html
+			app.component.css
+			app.component.ts
+			app.component.spec.ts			karma jasmine unit testing	
+
+
+Let us learn to create few components and plug them into the app
+
+	components can be parent and child
+		we can plug one component inside another component
+
+
+
+To create a component
+	ng g c login
+
+	what are the file will be created in this?
+		login.component.html
+		login.component.css
+		login.component.ts
+		login.component.spec.ts
+
+
+
+
+
+login.component.ts
+------------------
+	public class Login	(java)
+	LoginComponent
+
+
+
+Bootstrap
+-----------
+
+external css
+	how will you connect css and html
+
+
+p
+{
+	text-align: center
+}
+
+<link rel=stylesheet href="mycss.css" >
+
+
+User
+	username
+	password
+	firstName
+	lastName
+	emailId
+	phoneNo
+
+
+
+
+how to bind the values in the user interface
+
+
+
+	String username;
+	String password;
+
+	username:string;
+	
+
+Binding:
+	ts variable is bound to html element
+
+	{{username}}			this is called interpolation
+
+
+	property binding		[]
+	event binding			()
+	two way data binding		[()]		Banana in the box
+
+	value="x"				x is the value
+	[value]="x"				x is a variable
+	[(ngModel)]="x"
+
+
+
+1) Template driven form		(now we are doing)
+2) Reactive forms
+
+
+
+
+
+
+in our project
+	sign up 
+
+		a new user is being created
+		means, a row should be added to the usermaster table
+
+	from angular, we are not sending lot of information. 
+		we are sending only 1 object		of user
+
+in typescript, we can create class
+	ng g class user
+
+
+JSON
+	JavaScript Object Notation
+
+	object is translated into a String
+
+	{key:value,	key2:value2,	key3:value3	}
+
+
+
+
+in angular, 
+	whatever user enters in the signup form,
+	is converted into a JSON object
+
+	this object will be sent to 
+		java code
+		java code can store this as a record in database
+
+
+
+
+
+
+
+Steps for accessing REST API:
+------------------------------
+	ANGULAR service should be created
+		service is used to access rest api
+
+
+	a service can access external world with the help of HttpClient
+
+	in angular there is built in module called HttpClientModule		(we need to import this)
+
+	import
+		app.module.ts
+
+
+
+
+
+
