@@ -1,0 +1,132 @@
+form
+	last week we learnt to bind the form elements to the model in 
+
+"Template Driven Forms"
+	today we learn to do the same using
+"Reactive Forms"
+
+	1) in app.module.ts
+		we import 		ReactiveForms module
+
+	2) here, it is model driven approach			(earlier we used template driven)
+	
+
+	.ts	we define the form as an object
+
+	in previous approach
+	we created HTML code and bound each element to a variable in typescript
+
+	branch object	can be patched to a HTML form
+
+Spring boot
+	we can create a project from start.spring.io	website
+
+
+
+Spring tool suite
+	download from https://drive.google.com/file/d/1h-E6GG4wZ6sPYQVUGnlKdgHft0o-X-z-/view?usp=sharing
+
+	File -> New Spring starter project
+		
+	group Id:
+		com.cts.hrms		com.companyname.projectname
+	artifact id
+		project-name
+
+	in next screen choose
+		spring web 
+		lombok
+			as dependency
+
+	Lets run a hello world program
+		go to src/main/java folder
+			-> com.example.demo		(group id)
+
+	we are going to create
+		GET
+		POST
+		PUT
+		DELETE
+
+		these mappings 
+
+	in all these methods, 
+		Branch objects are stored or updated or delete or selected
+
+	first of all,
+	we need to create a Branch class
+		
+		bid, bname, bcity
+
+
+	we need a repository that will
+		add branch to the db		INSERT INTO
+		modify branch			UPDATE 
+		delete branch			DELETE
+		get all branches		SELECT  *  FROM  Branch
+		find branch by id		SELECT * FROM Branch WHERE bid=?
+
+	we don't need to write sql queries in spring boot		NOT NECESSARY
+
+
+	driver
+	url
+	username
+	password
+
+		thes info can be provided in "application.properties" file under src/main/resource
+
+	in controller
+		we provide URL for each method. this url will be used in angular to call these methods
+
+
+	ctrl+shift+o		organize imports
+
+1) mysql 
+	better to install mysql workbench
+	while downloading mysql, server also should be installed
+
+	else, download wampp or xampp server
+
+
+ CREATE TABLE branch
+   (
+    bid VARCHAR(6),
+    bname VARCHAR(30),
+    bcity VARCHAR(30),
+    CONSTRAINT branch_bid_pk PRIMARY KEY(bid) 
+   );
+
+
+
+
+
+
+INSERT INTO branch VALUES('B00001','Asaf ali road','Delhi');
+INSERT INTO branch VALUES('B00002','New delhi main branch','Delhi');
+INSERT INTO branch VALUES('B00003','Delhi cantt','Delhi');
+INSERT INTO branch VALUES('B00004','Jasola','Delhi');
+INSERT INTO branch VALUES('B00005','Mahim','Mumbai');
+INSERT INTO branch VALUES('B00006','Vile parle','Mumbai');
+INSERT INTO branch VALUES('B00007','Mandvi','Mumbai');
+INSERT INTO branch VALUES('B00008','Jadavpur','Kolkata');
+INSERT INTO branch VALUES('B00009','Kodambakkam','Chennai');
+
+
+
+
+
+
+in system env variables
+	create a variable
+
+1)	JAVA_HOME
+		C:\Program Files\Java\jdk1.8.0_281
+
+		NOTICE THAT "bin" is not included in JAVA_HOME
+
+
+2) 	Path
+		append the below path (REMEMBER DO NOT OVER WRITE ALL THE PATHS)
+			C:\Program Files\Java\jdk1.8.0_281\bin
+
