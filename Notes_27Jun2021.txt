@@ -1,0 +1,108 @@
+@Input
+@Output
+ng-content
+pipes
+	pre defined pipes
+		string
+		date
+		number format
+	custom pipes
+
+
+any pipe is doing a transformation
+	
+
+can we reverse a string using pipe?
+	there is no pre defined pipe for reversing a string.
+	so we can create a custom pipe
+
+How can we create a custom pipe?
+	a class that implements PipeTransform interface and override the "transform" method 
+	it must be declared in the @ngModule decorator of app.module.ts file
+
+	transform(value: unknown, ...args: unknown[]): unknown {
+    return null;
+  }
+
+	the transform method has atleast 1 arg. maximum any number of arguments
+
+
+		CAN YOU HEAR ME?
+
+
+
+
+
+
+Single Page Application
+	SPA
+
+app comp
+	user component
+		child component
+
+input:
+	parent component send value to the child component
+
+output:
+	child component send value to the parent component
+
+
+
+
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+// import { EventEmitter } from 'stream';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent implements OnInit {
+  username:string='rama';
+  password:string='ravi';
+
+  // @Output() loginEvent:EventEmitter<string>=new EventEmitter();
+  @Output() loginEvent:EventEmitter<string>=new EventEmitter();
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+  fnLogin()
+  {
+  //  alert(this.username+" and "+this.password); 
+    console.log(this.username);
+    this.loginEvent.emit(this.username);
+  }
+}
+
+
+
+
+
+parent to child
+
+
+
+-------------------
+ng-content
+
+
+
+
+
+angular
+java
+	spring core
+	spring aop
+	spring jdbc
+	spring mvc
+spring boot app
+
+Entity class
+Repository
+SErvice
+Controller
+	test the urls in postman
+
